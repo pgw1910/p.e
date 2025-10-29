@@ -1,11 +1,15 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from .models import product,cardapio,entregas,funcionarios
-from .serializers import productroductserialazer,cardapioserialazer,entregasserialazer,funcionariosserialazer
+from .serializers import productserialazer, cardapioserialazer, entregasserialazer, funcionariosserialazer
+from django.shortcuts import render
 
 # Create your views here.
-class productViewset(viewsets.ModelViewSet):
+def home(request):
+    return render(request, 'api/index.html')
+
+class ProductViewSet(viewsets.ModelViewSet):
  queryset = product.objects.all()
- serializer_class = productroductserialazer
+ serializer_class = productserialazer
 
 class cardapioViewSet(viewsets.ModelViewSet):
  queryset = cardapio.objects.all()
@@ -18,3 +22,7 @@ class entregasViewSet(viewsets.ModelViewSet):
 class funcionariosViewSet(viewsets.ModelViewSet):
  queryset = funcionarios.objects.all()
  serializer_class =funcionariosserialazer
+
+class ProductListCreateAPIView(generics.ListCreateAPIView):
+    queryset = product.objects.all()
+    serializer_class = productserialazer
