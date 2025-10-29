@@ -1,0 +1,90 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== GERAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #333;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background: #c0392b;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+/* ===== MENU ===== */
+nav {
+    background: #e74c3c;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* ===== BANNER ===== */
+.banner {
+    height: 300px;
+    background: url("https://picsum.photos/1200/300?food") center/cover no-repeat;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00000015;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #c0392b;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    margin: 6px 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
